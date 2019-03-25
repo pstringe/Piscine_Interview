@@ -1,12 +1,13 @@
 #include "header.h"
 
-int     searchPrice(struct s_arts **arts, char *name);
+int     searchPrice(struct s_art **arts, char *name)
 {
-        struct  s_art *tmp;
+        int i;
+		struct  s_art *tmp;
 
-        tmp = *arts;
-        while (tmp->name && tmp->price > 0)
-                if (!strncmp(tmp->name, name))
-                        return (tmp->price);
+		i = -1;
+        while ((tmp = arts[++i]))
+			if (!strcmp(tmp->name, name))
+				return (tmp->price);
         return (-1);
 }
