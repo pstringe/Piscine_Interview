@@ -1,0 +1,6 @@
+time:
+	avergae: O(n log n), n = number of elements
+	worst:	O(n^2)
+space:
+	O(n)
+
